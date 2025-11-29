@@ -1,0 +1,77 @@
+<div class="card resume-container">
+    <div class="header-section">
+        <h1 class="page-title">Resume</h1>
+        <div class="title-underline"></div>
+    </div>
+
+    <div class="resume-section">
+        <div class="section-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="section-icon">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            <h2 class="section-title">Experience</h2>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item" *ngFor="let exp of experiences">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="exp-header">
+                        <h3 class="role">{{ exp.role }}</h3>
+                        <span class="period">{{ exp.period }}</span>
+                    </div>
+                    <p class="company">{{ exp.company }} <span class="location">• {{ exp.location }}</span></p>
+                    <ul class="responsibilities">
+                        <li *ngFor="let resp of exp.responsibilities">{{ resp }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="resume-section">
+        <div class="section-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="section-icon">
+                <path d="M22 10v6M2 10v6"></path>
+                <path d="M2 10l10-5 10 5-10 5z"></path>
+                <path d="M12 15v6"></path>
+            </svg>
+            <h2 class="section-title">Education</h2>
+        </div>
+
+        <div class="education-grid">
+            <div class="edu-card" *ngFor="let edu of education">
+                <span class="edu-year">{{ edu.year }}</span>
+                <h3 class="edu-degree">{{ edu.degree }}</h3>
+                <p class="edu-institution">{{ edu.institution }}</p>
+                <p class="edu-location">{{ edu.location }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="resume-section">
+        <div class="section-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="section-icon">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            <h2 class="section-title">Technical Skills</h2>
+        </div>
+
+        <div class="skills-container">
+            <div class="skill-group" *ngFor="let group of skillGroups">
+                <h4 class="group-title">{{ group.category }}</h4>
+                <div class="tags">
+                    <span class="tag" *ngFor="let skill of group.skills">{{ skill }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

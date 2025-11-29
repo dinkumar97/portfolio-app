@@ -1,0 +1,75 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/assets/images/uploads"
+public_folder: "assets/images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "personal-info"
+        label: "Personal Info"
+        file: "src/assets/content/personal-info.json"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Profile Photo", name: "image", widget: "image"}
+          - {label: "Phone", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Location", name: "location", widget: "string"}
+          - {label: "LinkedIn URL", name: "linkedin", widget: "string"}
+          - {label: "GitHub URL", name: "github", widget: "string"}
+
+      - name: "about"
+        label: "About Page"
+        file: "src/assets/content/about.json"
+        fields:
+          - {label: "Greeting", name: "greeting", widget: "string"}
+          - {label: "Bio", name: "bio", widget: "text"}
+          - label: "Skills"
+            name: "skills"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Icon", name: "icon", widget: "select", options: ["code", "layers", "zap", "grid", "users", "database"]}
+              - {label: "Background Color", name: "bgColor", widget: "color"}
+              - {label: "Icon Color", name: "iconColor", widget: "color"}
+
+      - name: "resume"
+        label: "Resume Page"
+        file: "src/assets/content/resume.json"
+        fields:
+          - label: "Experience"
+            name: "experience"
+            widget: "list"
+            fields:
+              - {label: "Role", name: "role", widget: "string"}
+              - {label: "Company", name: "company", widget: "string"}
+              - {label: "Location", name: "location", widget: "string"}
+              - {label: "Period", name: "period", widget: "string"}
+              - {label: "Responsibilities", name: "responsibilities", widget: "list"}
+          
+          - label: "Education"
+            name: "education"
+            widget: "list"
+            fields:
+              - {label: "Degree", name: "degree", widget: "string"}
+              - {label: "Institution", name: "institution", widget: "string"}
+              - {label: "Location", name: "location", widget: "string"}
+              - {label: "Year", name: "year", widget: "string"}
+
+  - name: "projects"
+    label: "Projects"
+    folder: "src/assets/content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Category", name: "category", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Background Color", name: "color", widget: "color"}

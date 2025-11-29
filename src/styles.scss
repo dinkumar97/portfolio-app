@@ -1,0 +1,97 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #f5d4e8 0%, #e8d4f5 25%, #d4f5e8 75%, #d4e8f5 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background diagonal lines in corners */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Top-left corner - pink/magenta lines */
+body::before {
+  top: 0;
+  left: 0;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 105, 180, 0.15) 10px,
+      rgba(255, 105, 180, 0.15) 12px
+    );
+}
+
+/* Bottom-right corner - mint/cyan lines */
+body::after {
+  bottom: 0;
+  right: 0;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(168, 230, 207, 0.2) 10px,
+      rgba(168, 230, 207, 0.2) 12px
+    );
+}
+
+/* Color Variables */
+:root {
+  --primary-blue: #5B9FED;
+  --light-pink: #FFE8F0;
+  --light-blue: #E8F4FF;
+  --light-mint: #E8FFF0;
+  --light-peach: #FFF0E8;
+  --light-gray: #E8E8E8;
+  --dark-gray: #4A4A4A;
+  --black: #1A1A1A;
+  --white: #FFFFFF;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--black);
+  font-weight: 700;
+}
+
+p {
+  color: var(--dark-gray);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Utility Classes */
+.card {
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}

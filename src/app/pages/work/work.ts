@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ContentService } from '../../services/content.service';
 
 interface Project {
   title: string;
@@ -17,31 +18,18 @@ interface Project {
   templateUrl: './work.html',
   styleUrls: ['./work.scss']
 })
-export class WorkComponent {
-  projects: Project[] = [
-    {
-      title: 'Enterprise Micro Frontend Platform',
-      category: 'Architecture',
-      description: 'A scalable micro frontend architecture enabling multiple teams to contribute to a unified enterprise application. Implemented shared libraries and lazy loading strategies.',
-      image: 'assets/project1.jpg', // Placeholder
-      tags: ['Angular', 'TypeScript', 'Micro Frontends', 'RxJS'],
-      color: '#E8F4FF' // Light Blue
-    },
-    {
-      title: 'SaaS Analytics Dashboard',
-      category: 'Web Application',
-      description: 'High-performance analytics dashboard for visualizing complex data sets. Optimized rendering performance by 30% using virtual scrolling and efficient change detection.',
-      image: 'assets/project2.jpg', // Placeholder
-      tags: ['Angular', 'Highcharts', 'SCSS', 'Performance'],
-      color: '#FFE8F0' // Light Pink
-    },
-    {
-      title: 'E-commerce Customer Portal',
-      category: 'Responsive UI',
-      description: 'Dynamic customer-facing portal with seamless REST API integration. Features responsive design for optimal experience across all devices.',
-      image: 'assets/project3.jpg', // Placeholder
-      tags: ['Angular', 'REST API', 'Responsive Design', 'Bootstrap'],
-      color: '#E8FFF0' // Light Mint
-    }
-  ];
+export class WorkComponent implements OnInit {
+  projects: Project[] = [];
+
+  constructor(private content: ContentService) {}
+
+  ngOnInit(): void {
+    this.content.getProjects().subscribe((data) => {
+      this.projects = data || [];
+    }, (err) => {
+      console.warn('Could not fetch projects', err);
+      // fallback: empty
+      this.projects = [];
+    });
+  }
 }

@@ -1,0 +1,8 @@
+{
+  "experience": [
+    {"role":"Software Engineer","company":"Self","location":"Coimbatore","period":"2019-present","responsibilities":["Build apps","Architect systems"]}
+  ],
+  "education": [
+    {"degree":"B.Tech","institution":"Example University","location":"City","year":"2016"}
+  ]
+}

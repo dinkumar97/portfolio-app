@@ -5,15 +5,8 @@
     </div>
 
     <div class="bio-section">
-        <p class="greeting">Hey there 👋,</p>
-        <p class="bio-text">
-            Proactive and detail-oriented Front-End Developer with proven expertise in Angular and TypeScript at
-            LTIMindtree.
-            Skilled in developing scalable, high-performance web applications and reusable UI components.
-            Adept at applying Agile methodologies and performance optimization techniques to deliver reliable, efficient
-            software solutions.
-            Strong collaborator focused on clean architecture, maintainability, and continuous improvement.
-        </p>
+        <p class="greeting">{{ greeting || 'Hey there 👋,'}}</p>
+        <p class="bio-text">{{ bio || 'Proactive and detail-oriented Front-End Developer with proven expertise in Angular and TypeScript at LTIMindtree.' }}</p>
     </div>
 
     <div class="what-i-do-section">

@@ -1,0 +1,7 @@
+{
+  "greeting": "Hi, I'm Dinesh",
+  "bio": "Specialist software engineer focusing on web applications and developer productivity.",
+  "skills": [
+    {"title":"Frontend Development","description":"Angular, TypeScript","icon":"code","bgColor":"#E8F4FF","iconColor":"#4F46E5"}
+  ]
+}

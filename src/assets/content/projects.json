@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Enterprise Micro Frontend Platform",
+    "category": "Architecture",
+    "description": "A scalable micro frontend architecture enabling multiple teams to contribute to a unified enterprise application. Implemented shared libraries and lazy loading strategies.",
+    "image": "assets/project1.jpg",
+    "tags": ["Angular", "TypeScript", "Micro Frontends", "RxJS"],
+    "color": "#E8F4FF"
+  },
+  {
+    "title": "SaaS Analytics Dashboard",
+    "category": "Web Application",
+    "description": "High-performance analytics dashboard for visualizing complex data sets. Optimized rendering performance by 30% using virtual scrolling and efficient change detection.",
+    "image": "assets/project2.jpg",
+    "tags": ["Angular", "Highcharts", "SCSS", "Performance"],
+    "color": "#FFE8F0"
+  }
+]

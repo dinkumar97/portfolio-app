@@ -75,3 +75,19 @@ collections:
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Background Color", name: "color", widget: "color"}
+
+  - name: "projects_index"
+    label: "Projects Index"
+    files:
+      - name: "projects-json"
+        label: "Projects JSON"
+        file: "src/assets/content/projects.json"
+        fields:
+          - {label: "Projects", name: "projects", widget: "list", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Category", name: "category", widget: "string"},
+              {label: "Description", name: "description", widget: "text"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Tags", name: "tags", widget: "list"},
+              {label: "Background Color", name: "color", widget: "color"}
+            ]}

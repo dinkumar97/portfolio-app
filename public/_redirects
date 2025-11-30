@@ -1,0 +1,11 @@
+# Netlify redirects configuration for SPA routing and Netlify CMS
+# Order matters: put exact service routes (Netlify API /admin) before the SPA fallback
+
+# Allow Netlify's internal API paths like /.netlify/git/* to be served and avoided by SPA rewrite
+/.netlify/*    /.netlify/:splat   200
+
+# Serve admin panel files (Netlify CMS) for /admin/* routes
+/admin/*    /admin/index.html   200
+
+# SPA fallback - keep at the bottom
+/*    /index.html   200

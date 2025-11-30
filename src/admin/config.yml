@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
-  branch: main
+  # Use the branch name that matches the repository. This project uses `master` as the
+  # default branch in GitHub; Netlify CMS should point to that branch to avoid 404s
+  branch: master
 
 media_folder: "src/assets/images/uploads"
 public_folder: "assets/images/uploads"

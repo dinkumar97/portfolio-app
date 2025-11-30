@@ -57,3 +57,11 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Netlify Identity and invite links
+
+If you use Netlify Identity and invite links for email activation, ensure the following:
+
+- `public/_redirects` contains a SPA redirect rule that preserves URL hash fragments (for example `/* /index.html 200`).
+- The Identity widget is included and initialised early in `src/index.html` so Netlify's `invite_token` in the hash (`#invite_token=...`) is processed before Angular's route redirects. This repo initialises Netlify Identity in `src/index.html` and opens the signup modal if an `invite_token` is present in the URL hash.
+- When you deploy to Netlify, the invite link will be like `https://<site>.netlify.app/#invite_token=...` and the widget should process that and activate the user.

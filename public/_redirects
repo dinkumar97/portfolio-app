@@ -3,3 +3,6 @@
 # and preserves hash fragments for Netlify Identity
 
 /*    /index.html   200
+
+# Serve admin panel files (Netlify CMS) for /admin/* routes
+/admin/*    /admin/index.html   200

@@ -11,17 +11,51 @@
 
 <body>
   <app-root></app-root>
+  <!-- Netlify Identity: load early and initialise to ensure invite_token in hash is processed before Angular routing can redirect -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
+    // Register init and login listeners and call init() explicitly so the invite_token
+    // passed in the URL hash (#invite_token=...) gets processed correctly.
+    (function() {
+      function initNetlifyIdentity() {
+        if (window.netlifyIdentity) {
+          // Ensure the widget is initialised (processes invite_token and other query data)
+          window.netlifyIdentity.on("init", user => {
+            if (!user) {
+              // When a login occurs (either automatic via invite or user action), redirect to admin
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+              });
+            }
           });
+          // Call init to make sure the widget processes the URL hash even if auto-init happened earlier
+          try {
+            window.netlifyIdentity.init();
+          } catch (e) {
+            // init may have already run; swallow errors so production won't break
+            // Fallback: nothing to do here
+            console.warn('Netlify Identity init error:', e);
+          }
+          // If the URL contains an invite_token in the hash, explicitly open the signup modal
+          // to prompt the user and ensure netlify uses the token to accept the invitation.
+          try {
+            var h = window.location.hash || '';
+            if (h.indexOf('invite_token=') !== -1) {
+              // Open the sign-up modal and let Netlify Identity handle activation
+              window.netlifyIdentity.open('signup');
+            }
+          } catch (e) {
+            // noop
+          }
         }
-      });
-    }
+      }
+      // Run on DOMContentLoaded in case the app bundle bootstraps before this script executes
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initNetlifyIdentity);
+      } else {
+        initNetlifyIdentity();
+      }
+    })();
   </script>
 </body>
 

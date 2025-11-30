@@ -1,24 +1,24 @@
 {
   "greeting": "Hi, I'm Dinesh",
-  "bio": "Proactive and detail-oriented Front-End Developer with proven expertise in Angular and  TypeScript at LTIMindtree. Skilled in developing scalable, high-performance web applications and  reusable UI components. Adept at applying Agile methodologies and performance optimization techniques to deliver reliable, efficient software solutions. Strong collaborator focused on clean  architecture, maintainability, and continuous improvement.",
+  "bio": "I'm Dineshkumar, a Front-End Developer with 7 years of experience building fast, scalable, and maintainable web applications using Angular and TypeScript. I focus on clean code, reusable UI components, and solving complex problems with efficient, user-centric solutions.",
   "skills": [
     {
       "title": "UI/UX Design Implementation",
-      "description": "I bring to life the designs crafted by UI/UX designers, translating static mockups into interactive and visually appealing user interfaces. Working closely with designers, I ensure the final product maintains usability and accessibility standards, focusing on color schemes, typography, and responsive layouts to enhance the overall user experience.",
+      "description": "I bring UI/UX designs to life—converting static concepts into intuitive, responsive, and engaging user interfaces. With a strong eye for detail, accessibility, and visual consistency, I help turn great design into exceptional user experience.",
       "icon": "architecture",
       "bgColor": "#E8F4FF",
       "iconColor": "#5B9FED"
     },
     {
       "title": "Frontend Technologies",
-      "description": "I keep my frontend skills sharp with HTML, CSS, and JavaScript fundamentals, enhancing them with React and Angular for added versatility. I address browser quirks and performance challenges to deliver robust, scalable solutions. Compatibility and performance are always prioritized, ensuring our creations provide an outstanding user experience and meet business needs.",
+      "description": "I maintain a strong foundation in HTML, CSS, and JavaScript, and enhance my expertise with Angular  to build flexible and modern front-end solutions. I focus on resolving browser inconsistencies, improving performance, and ensuring seamless scalability. By prioritizing compatibility, responsiveness, and user experience, I deliver reliable, high-quality applications that align with both user expectations and business goals.",
       "icon": "code",
       "bgColor": "#FFE8F0",
       "iconColor": "#ff4586"
     },
     {
       "title": "SEO Implementation",
-      "description": "I integrate SEO best practices into frontend development to improve website visibility and ranking on search engines. I optimize HTML structure, meta tags, and schema markup, as well as ensure fast loading times and mobile responsiveness for enhanced search engine performance.",
+      "description": "I incorporate SEO best practices into front-end development to enhance website visibility and search engine ranking. This includes optimizing HTML structure, meta tags, and schema markup while ensuring fast loading performance and mobile responsiveness. The result is a user-friendly and search-efficient experience that supports both technical quality and business growth.",
       "icon": "travel_explore",
       "bgColor": "#FFF0E8",
       "iconColor": "#ff4586"

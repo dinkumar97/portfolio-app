@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-left-sidebar',
+  standalone: true,
   imports: [],
   templateUrl: './left-sidebar.html',
-  styleUrl: './left-sidebar.scss',
+  styleUrls: ['./left-sidebar.scss'],
 })
 export class LeftSidebarComponent {
 

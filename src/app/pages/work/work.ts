@@ -15,7 +15,7 @@ interface Project {
   standalone: true,
   imports: [CommonModule],
   templateUrl: './work.html',
-  styleUrl: './work.scss'
+  styleUrls: ['./work.scss']
 })
 export class WorkComponent {
   projects: Project[] = [

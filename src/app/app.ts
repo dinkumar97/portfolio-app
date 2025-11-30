@@ -5,9 +5,10 @@ import { RightNavigationComponent } from './components/right-navigation/right-na
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [RouterOutlet, LeftSidebarComponent, RightNavigationComponent],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrls: ['./app.scss']
 })
 export class AppComponent {
   title = 'portfolio-app';

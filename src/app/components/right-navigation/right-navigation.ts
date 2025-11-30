@@ -3,9 +3,10 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-right-navigation',
+  standalone: true,
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './right-navigation.html',
-  styleUrl: './right-navigation.scss'
+  styleUrls: ['./right-navigation.scss']
 })
 export class RightNavigationComponent {
   navItems = [

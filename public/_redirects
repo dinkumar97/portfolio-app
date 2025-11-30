@@ -1,0 +1,5 @@
+# Netlify redirects configuration for SPA routing
+# This ensures all routes are handled by Angular's router
+# and preserves hash fragments for Netlify Identity
+
+/*    /index.html   200

@@ -26,7 +26,7 @@ interface SkillGroup {
   standalone: true,
   imports: [CommonModule],
   templateUrl: './resume.html',
-  styleUrl: './resume.scss'
+  styleUrls: ['./resume.scss']
 })
 export class ResumeComponent {
   experiences: Experience[] = [

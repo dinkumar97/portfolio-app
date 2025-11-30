@@ -5,7 +5,7 @@ import { ContentService } from '../../services/content.service';
 interface PersonalInfo {
   name?: string;
   title?: string;
-  profilePhoto?: string;
+  image?: string;
   phone?: string;
   email?: string;
   location?: string;

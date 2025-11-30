@@ -1,18 +1,42 @@
 {
-  "summary": "Proactive and detail-oriented Front-End Developer with proven expertise in Angular and TypeScript at LTIMindtree. Skilled in developing scalable, high-performance web applications and reusable UI components. Adept at applying Agile methodologies and performance optimization techniques to deliver reliable, efficient software solutions. Strong collaborator focused on clean architecture, maintainability, and continuous improvement.",
   "skills": [
-    "Angular",
-    "TypeScript",
-    "HTML5",
-    "SCSS",
-    "JavaScript (ES6+)",
-    "RESTful APIs",
-    "Micro Frontend Architecture",
-    "Performance Optimization",
-    "Debugging & Code Reviews",
-    "Reusable Component Design",
-    "Agile / Scrum Methodologies",
-    "Version Control (Git)"
+    {
+      "category": "Frontend Frameworks & Languages",
+      "skills": [
+        "Angular",
+        "TypeScript",
+        "JavaScript (ES6+)",
+        "HTML5",
+        "SCSS"
+      ]
+    },
+    {
+      "category": "Architecture & Design",
+      "skills": [
+        "Micro Frontend Architecture",
+        "Reusable Component Design",
+        "Performance Optimization"
+      ]
+    },
+    {
+      "category": "Development Practices",
+      "skills": [
+        "Debugging & Code Reviews",
+        "Agile / Scrum Methodologies"
+      ]
+    },
+    {
+      "category": "Integration & APIs",
+      "skills": [
+        "RESTful APIs"
+      ]
+    },
+    {
+      "category": "Version Control",
+      "skills": [
+        "Git"
+      ]
+    }
   ],
   "experience": [
     {

@@ -1,7 +1,34 @@
 {
   "greeting": "Hi, I'm Dinesh",
-  "bio": "Specialist software engineer focusing on web applications and developer productivity.",
+  "bio": "Proactive and detail-oriented Front-End Developer with proven expertise in Angular and  TypeScript at LTIMindtree. Skilled in developing scalable, high-performance web applications and  reusable UI components. Adept at applying Agile methodologies and performance optimization techniques to deliver reliable, efficient software solutions. Strong collaborator focused on clean  architecture, maintainability, and continuous improvement.",
   "skills": [
-    {"title":"Frontend Development","description":"Angular, TypeScript","icon":"code","bgColor":"#E8F4FF","iconColor":"#4F46E5"}
+    {
+      "title": "UI/UX Design Implementation",
+      "description": "I bring to life the designs crafted by UI/UX designers, translating static mockups into interactive and visually appealing user interfaces. Working closely with designers, I ensure the final product maintains usability and accessibility standards, focusing on color schemes, typography, and responsive layouts to enhance the overall user experience.",
+      "icon": "architecture",
+      "bgColor": "#E8F4FF",
+      "iconColor": "#5B9FED"
+    },
+    {
+      "title": "Frontend Technologies Mastery",
+      "description": "I keep my frontend skills sharp with HTML, CSS, and JavaScript fundamentals, enhancing them with React and Angular for added versatility. I address browser quirks and performance challenges to deliver robust, scalable solutions. Compatibility and performance are always prioritized, ensuring our creations provide an outstanding user experience and meet business needs.",
+      "icon": "code",
+      "bgColor": "#FFE8F0",
+      "iconColor": "#ff4586"
+    },
+    {
+      "title": "SEO Implementation",
+      "description": "I integrate SEO best practices into frontend development to improve website visibility and ranking on search engines. I optimize HTML structure, meta tags, and schema markup, as well as ensure fast loading times and mobile responsiveness for enhanced search engine performance.",
+      "icon": "travel_explore",
+      "bgColor": "#FFF0E8",
+      "iconColor": "#ff4586"
+    },
+    {
+      "title": "Collaboration and Communication",
+      "description": "As a frontend developer, I prioritize effective collaboration with cross-functional teams, including backend developers, designers, and clients, to ensure alignment on project goals and requirements. Clear communication is essential throughout the development process, fostering a collaborative environment and contributing to project success.",
+      "icon": "people",
+      "bgColor": "#E8FFF0",
+      "iconColor": "#5B9FED"
+    }
   ]
 }

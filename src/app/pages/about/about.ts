@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 import { ContentService } from '../../services/content.service';
 
 interface Skill {
@@ -13,7 +14,7 @@ interface Skill {
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatIconModule],
   templateUrl: './about.html',
   styleUrls: ['./about.scss']
 })
@@ -22,7 +23,7 @@ export class AboutComponent implements OnInit {
   greeting?: string;
   bio?: string;
 
-  constructor(private content: ContentService,private cdr:ChangeDetectorRef) {}
+  constructor(private content: ContentService, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.content.getAbout().subscribe((data) => {

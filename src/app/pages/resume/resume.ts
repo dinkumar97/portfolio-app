@@ -42,7 +42,7 @@ export class ResumeComponent implements OnInit {
     this.content.getResume().subscribe((data) => {
       this.experiences = data?.experience ?? [];
       this.education = data?.education ?? [];
-      this.skillGroups = data?.skillGroups ?? [];
+      this.skillGroups = data?.skills ?? [];
       this.cdr.detectChanges();
     }, (err) => {
       console.warn('Could not fetch resume content', err);

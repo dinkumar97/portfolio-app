@@ -5,13 +5,13 @@
     </div>
 
     <div class="bio-section">
-        <p class="greeting">{{ greeting || 'Hey there 👋,'}}</p>
-        <p class="bio-text">{{ bio || 'Proactive and detail-oriented Front-End Developer with proven expertise in Angular and TypeScript at LTIMindtree.' }}</p>
+       @if(greeting) {<p class="greeting">{{ greeting || 'Hey there 👋,'}}</p>}
+       @if(bio){ <p class="bio-text">{{ bio || 'Proactive and detail-oriented Front-End Developer with proven expertise in Angular and TypeScript at LTIMindtree.' }}</p>}
     </div>
 
     <div class="what-i-do-section">
         <h2 class="section-title">What I do!</h2>
-
+@if (skills) {
         <div class="skills-grid">
             <div class="skill-card" *ngFor="let skill of skills" [style.background-color]="skill.bgColor">
                 <div class="skill-icon">
@@ -64,5 +64,6 @@
                 </div>
             </div>
         </div>
+    }
     </div>
 </div>
